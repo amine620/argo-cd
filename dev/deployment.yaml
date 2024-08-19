@@ -17,3 +17,10 @@ spec:
           image: mouridamine/sw:1.0
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+      volumes:
+       - name: config-volume
+       configMap:
+         name: app-config

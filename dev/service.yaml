@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service
+  name: sw-service
 spec:
   selector:
-    app: myapp
+    app: star-wars
+  type: LoadBalancer
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
-  
+    - protocol: TCP
+      port: 3000
+      targetPort: 8080
+      nodePort: 31000

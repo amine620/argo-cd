@@ -19,7 +19,7 @@ spec:
       source:
         repoURL: https://github.com/your-repo/repo.git
         targetRevision: HEAD
-        path: "{{path}}"
+        path: mongodbApp
       destination:
         server: https://kubernetes.default.svc
         namespace: "myapp"

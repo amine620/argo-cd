@@ -9,8 +9,8 @@ spec:
         repoURL: https://github.com/amine620/argo-cd.git
         revision: HEAD
         directories:
-          - path: mongodbApp/dev
-          - path: nodejsApp/dev
+          - path: mongodbApp
+          - path: nodejsApp
   template:
     metadata:
       name: "{{path.basename}}-application"

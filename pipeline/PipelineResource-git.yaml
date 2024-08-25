@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: app-git-repo
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/<your-github-repo>.git
+    - name: revision
+      value: main # or the branch you want to use

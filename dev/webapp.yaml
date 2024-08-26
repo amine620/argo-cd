@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: nanajanashia/k8s-demo-app:v1.0
+          image: mouridamine/todo-app:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
           env:
             - name: USER_NAME
               valueFrom:
@@ -47,5 +47,5 @@ spec:
   ports:
     - protocol: TCP
       port: 3000
-      targetPort: 3000
+      targetPort: 80
       nodePort: 30102

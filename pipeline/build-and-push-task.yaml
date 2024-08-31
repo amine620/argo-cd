@@ -1,0 +1,26 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: build-and-push
+  namespace: tekton-app
+
+spec:
+  workspaces:
+    - name: source
+  params:
+    - name: dockerfile
+      type: string
+      description: Path to the Dockerfile
+      default: ./Dockerfile
+    - name: image
+      type: string
+      description: Image name to push
+  steps:
+    - name: build
+      image: docker
+      script: |
+        docker build -f $(workspaces.source.path)/$(params.dockerfile) -t $(params.image) $(workspaces.source.path)
+    - name: push
+      image: docker
+      script: |
+        docker push $(params.image)

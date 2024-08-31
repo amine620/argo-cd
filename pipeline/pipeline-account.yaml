@@ -2,8 +2,10 @@ apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
   name: docker-image
+  namespace: tekton-app
+
 spec:
   type: image
   params:
     - name: url
-      value: docker.io/<your-dockerhub-username>/<image-name>:latest
+      value: docker.io/mouridamine/todo-app:latest

@@ -1,0 +1,10 @@
+{
+    "auths": {
+        "https://index.docker.io/v1/": {
+            "username": "mouridamine",
+            "password": "Amin.Morid..",
+            "email": "mouridamine360@gmail.com",
+            "auth": "bW91cmlkYW1pbmU6QW1pbi5Nb3JpZC4u"
+        }
+    }
+}

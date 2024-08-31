@@ -2,10 +2,12 @@ apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
   name: app-git-repo
+  namespace: tekton-app
+
 spec:
   type: git
   params:
     - name: url
-      value: https://github.com/<your-github-repo>.git
+      value: https://github.com/amine620/tekton-app-test.git
     - name: revision
-      value: main # or the branch you want to use
+      value: master # or the branch you want to use

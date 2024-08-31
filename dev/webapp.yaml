@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: mouridamine/todo-app:latest
+          image: mouridamine/syrec:latest
           ports:
             - containerPort: 80
           env:

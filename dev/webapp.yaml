@@ -22,19 +22,9 @@ spec:
           env:
             - name: USER_NAME
               valueFrom:
-                secretKeyRef:
-                  name: app-secrets
-                  key: mongo-user
-            - name: USER_PWD
-              valueFrom:
-                secretKeyRef:
-                  name: app-secrets
-                  key: mongo-password
-            - name: DB_URL
-              valueFrom:
                 configMapKeyRef:
-                  name: mongo-config
-                  key: mongo-url
+                  name: app-config
+                  key: username
 ---
 apiVersion: v1
 kind: Service
